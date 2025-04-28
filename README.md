@@ -1,26 +1,80 @@
-# 💰 Simple Banking System - Python CLI
+# Sistema Bancário em Python 🏦
 
-Este é um sistema bancário simples em Python, executado no terminal. Ele simula operações básicas como **depósito**, **saque**, e **exibição de extrato**, com limites pré-definidos.
+Este é um projeto de um sistema bancário simples desenvolvido em Python, com funcionalidades básicas como criação de clientes e contas, realização de depósitos, saques e emissão de extratos.
 
-## 🧠 Funcionalidades
+## 📋 Funcionalidades
 
-- 💵 **Depósito**: Permite adicionar dinheiro à conta, desde que o valor seja positivo.
-- 🏧 **Saque**: Limita o número de saques diários e o valor máximo por saque.
-- 📄 **Extrato**: Mostra todas as transações realizadas e o saldo atual.
-- ❌ **Saída**: Encerra o programa com segurança.
+- Criar clientes (Pessoa Física)
+- Criar contas bancárias (Conta Corrente)
+- Depositar valores em contas
+- Realizar saques (com limites de valor e quantidade de saques)
+- Exibir extrato de movimentações
+- Listar todas as contas criadas
 
-## 📋 Regras do sistema
+## 🚀 Tecnologias utilizadas
 
-- Limite de **3 saques por sessão**
-- Valor máximo por saque: **R$500**
-- Depósitos e saques devem ser valores **positivos**
-- Transações são registradas em um **extrato**
+- Python 3.10+
+- Programação Orientada a Objetos (POO)
+- Princípios de boas práticas de software (abstração, herança, composição)
 
-## ▶️ Como usar
+## 📂 Estrutura de Classes
 
-1. Clone este repositório ou copie o código Python.
-2. Execute o script no terminal:
+- `Cliente`: Classe base para clientes.
+- `PessoaFisica`: Herda de `Cliente`.
+- `Conta`: Classe base de conta bancária.
+- `ContaCorrente`: Herda de `Conta`, com regras específicas de saque.
+- `Transacao`: Classe abstrata para transações.
+- `Saque` e `Deposito`: Implementam a classe abstrata `Transacao`.
+- `Historico`: Armazena as transações de uma conta.
 
-```bash
-python nome_do_arquivo.py
+## 🎮 Como executar o projeto
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   ```
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd seu-repositorio
+   ```
+3. Execute o programa:
+   ```bash
+   python nome_do_arquivo.py
+   ```
+
+## 📖 Exemplo de uso
+
+```plaintext
+=========== MENU =============
+[S] Sacar
+[E] Extrato
+[D] Depositar
+[NC] Nova conta
+[LC] Listar Contas
+[NU] Novo usuário
+[Q] Quit (Sair)
+```
+
+- Para criar um novo cliente, selecione `[NU]`.
+- Para abrir uma nova conta para um cliente existente, selecione `[NC]`.
+- Para movimentações financeiras, utilize `[D]` para depositar, `[S]` para sacar e `[E]` para visualizar o extrato.
+
+## 🔥 Melhorias futuras
+
+- Persistência de dados em arquivos (JSON ou SQLite)
+- Interface gráfica (GUI)
+- Implementar mais tipos de contas (ex: Conta Poupança)
+- Controle de autenticação de usuários
+
+## 🧑‍💻 Autor
+
+Desenvolvido por [Seu Nome Aqui].
+
+---
+
+# 📜 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
 
